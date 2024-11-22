@@ -12,6 +12,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 
     Optional<UserEntity> findByUsername(String username);
 
-    @Query(nativeQuery = true, value = "SELECT firstname FROM usermanagement_db.user WHERE username = ?1")
+    @Query(nativeQuery = true, value = "SELECT firstname FROM user WHERE username = ?1")
     String findFirstName(String username);
 }
